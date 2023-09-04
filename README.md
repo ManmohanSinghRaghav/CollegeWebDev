@@ -1,2 +1,2 @@
 # CollegeWebDev
-College Work
+Just Some College Work
