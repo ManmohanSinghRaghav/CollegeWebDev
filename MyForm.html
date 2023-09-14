@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body bgcolor="#FFFFCC" text="#ff6633">
+    <h1 align="center">Registration Form</h1>
+    <center>
+        <img src="C:\Users\GLAU\Downloads\sergei.jpg" height="150px" width="150px" alt="Photo" border="4">
+    </center><br>
+    <form action="" method="post">
+        <table align="center" height="250px">
+            <tr>
+                <td><label for="Name" >First Name </label></td>
+                <td><input type="text" name="Name"></td>
+            </tr>
+            <tr>
+                <td><label for="Name">Last Name </label></td>
+                <td><input type="text" name="Name"></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Date of Birth</label></td>
+                <td><input type="date" name="DOB"></td>
+            </tr>
+            <tr>
+                <td><label for="Country">Country</label></td>
+                <td><select name="Country">
+                    <option value="None"> Country </option>
+                    <option value="India"> India </option>
+                    <option value="USA"> USA </option>
+                    <option value="UK"> UK </option>
+                    <option value="CANADA"> CANADA </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4"><label for="Gender">Gender </label></td>
+            </tr>
+            <tr>
+                <td><label for="Gender"><input type="radio" name="Gender"> Male</label></td>
+            </tr>
+            <tr>
+                <td><label for="Gender"><input type="radio" name="Gender"> Female</label></td>
+            </tr>
+            <tr>
+                <td><label for="Gender"><input type="radio" name="Gender"> Other</label></td>
+            </tr>
+            <tr>
+                <td><label for="Address">Address </label></td>
+                <td><input type="text" name="Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="Email">Email Id </label></td>
+                <td><input type="email" name="Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="name">Contact Number </label></td>
+                <td><input type="number" name="Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="name">Password</label></td>
+                <td><input type="password" name="Name" minlength="8" required></td>
+            </tr>
+            <tr>
+                <td><label for="name">Confirm Password </label></td>
+                <td><input type="password" name="Name"  minlength="8" required></td>
+            </tr>
+            <tr>
+                <td><label for="name">Description </label></td>
+                <td><textarea name="Description"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="terms" required> I Agree to the Terms of use</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="SUBMIT">
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
