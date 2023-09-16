@@ -2,38 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        body,
+        input,
+        textarea,
+        select {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: lighter;
+            background-color: #000000;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 10px;
+            font-weight: lighter;
+            border: 1px solid #470909;
+        }
+
+        input {
+            accent-color: #830404;
+        }
+
+        select {
+            width: 97%;
+        }
+
+        .dob,
+        textarea {
+            width: 88%;
+        }
+
+        img {
+            margin-right: 50px;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: lighter;
+            border-bottom: 1px solid #ffffff;
+            border-top: 1px solid #ffffff;
+            padding: 20px;
+        }
+
+        .s_btn {
+            background-color: #470909;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 5%;
+            margin-left: 60%;
+            align-content: center;
+        }
+
+    </style>
 </head>
 
-<body bgcolor="#FFFFCC" text="#ff6633">
+<body>
     <h1 align="center">Registration Form</h1>
-    <center>
-        <img src="C:\Users\GLAU\Downloads\sergei.jpg" height="150px" width="150px" alt="Photo" border="4">
-    </center><br>
+    <img src="https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg" align="right" alt="Photo"
+        border="4">
     <form action="" method="post">
         <table align="center" height="250px">
             <tr>
-                <td><label for="Name" >First Name </label></td>
-                <td><input type="text" name="Name"></td>
+                <td><label for="Name">First Name </label></td>
+                <td><input type="text" name="Name" placeholder="Enter first name here..."></td>
             </tr>
             <tr>
                 <td><label for="Name">Last Name </label></td>
-                <td><input type="text" name="Name"></td>
+                <td><input type="text" name="Name" placeholder="Enter last name here..."></td>
             </tr>
             <tr>
                 <td><label for="DOB">Date of Birth</label></td>
-                <td><input type="date" name="DOB"></td>
+                <td><input type="date" name="DOB" class="dob" placeholder="Enter DOB here..."></td>
             </tr>
             <tr>
                 <td><label for="Country">Country</label></td>
                 <td><select name="Country">
-                    <option value="None"> Country </option>
-                    <option value="India"> India </option>
-                    <option value="USA"> USA </option>
-                    <option value="UK"> UK </option>
-                    <option value="CANADA"> CANADA </option>
+                        <option value="None"> Country </option>
+                        <option value="India"> INDIA </option>
+                        <option value="USA"> USA </option>
+                        <option value="UK"> UK </option>
+                        <option value="CANADA"> CANADA </option>
                     </select>
                 </td>
             </tr>
@@ -41,45 +99,44 @@
                 <td rowspan="4"><label for="Gender">Gender </label></td>
             </tr>
             <tr>
-                <td><label for="Gender"><input type="radio" name="Gender"> Male</label></td>
+                <td  class="gen"><label for="Gender"><input type="radio" name="Gender"> Male</label></td>
             </tr>
             <tr>
-                <td><label for="Gender"><input type="radio" name="Gender"> Female</label></td>
+                <td class="gen"><label for="Gender"><input type="radio" name="Gender"> Female</label></td>
             </tr>
             <tr>
-                <td><label for="Gender"><input type="radio" name="Gender"> Other</label></td>
+                <td class="gen"><label for="Gender"><input type="radio" name="Gender"> Other</label></td>
             </tr>
             <tr>
                 <td><label for="Address">Address </label></td>
-                <td><input type="text" name="Name" required></td>
+                <td><input type="text" name="Name" placeholder="Enter address here..."></td>
             </tr>
             <tr>
                 <td><label for="Email">Email Id </label></td>
-                <td><input type="email" name="Name" required></td>
+                <td><input type="email" name="Name" placeholder="Enter email here..."></td>
             </tr>
             <tr>
                 <td><label for="name">Contact Number </label></td>
-                <td><input type="number" name="Name" required></td>
+                <td><input type="tel" name="Name" placeholder="Enter contact number..."></td>
             </tr>
             <tr>
                 <td><label for="name">Password</label></td>
-                <td><input type="password" name="Name" minlength="8" required></td>
+                <td><input type="password" name="Name" minlength="8" placeholder="Enter password here..."></td>
             </tr>
             <tr>
                 <td><label for="name">Confirm Password </label></td>
-                <td><input type="password" name="Name"  minlength="8" required></td>
+                <td><input type="password" name="Name" minlength="8" placeholder="Confirm password here..."></td>
             </tr>
             <tr>
                 <td><label for="name">Description </label></td>
-                <td><textarea name="Description"></textarea></td>
+                <td><textarea name="Description" placeholder="Enter description here..."></textarea></td>
             </tr>
             <tr>
                 <td></td>
                 <td><input type="checkbox" name="terms" required> I Agree to the Terms of use</td>
             </tr>
             <tr>
-                <td></td>
-                <td><input type="submit" value="SUBMIT">
+                <td colspan="3" class="td_btn"><input type="submit" class="s_btn" value="SUBMIT">
             </tr>
         </table>
     </form>
