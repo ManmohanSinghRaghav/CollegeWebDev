@@ -4,6 +4,10 @@
 <head>
     <title>Form</title>
     <style>
+        * {
+            border: none;
+        }
+
         body,
         input,
         textarea,
@@ -11,7 +15,7 @@
             font-size: 20px;
             color: #ffffff;
             font-weight: lighter;
-            background-color: #000000;
+            background-color: #1c1b1b;
             font-family: 'Times New Roman', Times, serif;
         }
 
@@ -20,7 +24,9 @@
         select {
             padding: 10px;
             font-weight: lighter;
-            border: 1px solid #470909;
+            background-color: #020202;
+            border-bottom: 2px solid #470909;
+            border-radius: 10px;
         }
 
         input {
@@ -31,18 +37,43 @@
             width: 97%;
         }
 
+        .lbls {
+            border-bottom: 2px solid #470909;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        table{
+            background-color: #02020265;
+            padding: 20px;
+            margin: 5%;
+            margin-left: 20%;
+            border-radius: 15px;
+        }
+        
+        .cont{
+            padding: 10px;
+            margin-right: 10%;
+            margin-left: 10%;
+            border-radius: 20px;
+            background-color: #00000047;
+        }
+
         .dob,
         textarea {
             width: 88%;
         }
 
         img {
-            margin-right: 50px;
+            margin: 5%;
+            margin-top: 10%;
+            margin-right: 25%;
             height: 150px;
-            width: 150px;
+            width: 130px;
             object-fit: cover;
+            object-position: 25%;
             border: 2px solid #ffffff;
-            border-radius: 20px;
+            border-radius: 10px;
             padding: 5px;
         }
 
@@ -58,77 +89,88 @@
             background-color: #470909;
             border-radius: 10px;
             padding: 15px;
-            margin-top: 5%;
+            margin: 5%;
             margin-left: 60%;
             align-content: center;
         }
 
+        .gen {
+            border: none;
+        }
     </style>
 </head>
 
 <body>
     <h1 align="center">Registration Form</h1>
-    <img src="https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg" align="right" alt="Photo"
-        border="4">
+    <section class="cont">
+        <img src="https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg" align="right" alt="Photo">
     <form action="" method="post">
         <table align="center" height="250px">
             <tr>
-                <td><label for="Name">First Name </label></td>
+                <td class="lbls"><label for="Name">First Name </label></td>
                 <td><input type="text" name="Name" placeholder="Enter first name here..."></td>
             </tr>
             <tr>
-                <td><label for="Name">Last Name </label></td>
+                <td class="lbls"><label for="Name">Last Name </label></td>
                 <td><input type="text" name="Name" placeholder="Enter last name here..."></td>
             </tr>
             <tr>
-                <td><label for="DOB">Date of Birth</label></td>
+                <td class="lbls"><label for="DOB">Date of Birth</label></td>
                 <td><input type="date" name="DOB" class="dob" placeholder="Enter DOB here..."></td>
             </tr>
             <tr>
-                <td><label for="Country">Country</label></td>
+                <td class="lbls"><label for="Country">Country</label></td>
                 <td><select name="Country">
-                        <option value="None"> Country </option>
+                        <option value="None"> Select Country</option>
                         <option value="India"> INDIA </option>
                         <option value="USA"> USA </option>
                         <option value="UK"> UK </option>
-                        <option value="CANADA"> CANADA </option>
+                        <option value="Canada"> CANADA </option>
+                        <option value="Nepal"> NEPAL </option>
+                        <option value="China"> CHINA </option>
+                        <option value="Bhutan"> BHUTAN </option>
+                        <option value="Bangladesh"> BANGLADESH </option>
+                        <option value="Mayanmar"> MAYANMAR </option>
+                        <option value="Japan"> JAPAN </option>
+                        <option value="SKorea"> SOUTH KOREA </option>
+                        <option value="Russia"> RUSSIA </option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td rowspan="4"><label for="Gender">Gender </label></td>
+                <td rowspan="4" class="lbls"><label for="Gender">Gender </label></td>
             </tr>
             <tr>
-                <td  class="gen"><label for="Gender"><input type="radio" name="Gender"> Male</label></td>
+                <td class="gen"><label for="Gender" class="gen"><input type="radio" name="Gender"> Male</label></td>
             </tr>
             <tr>
-                <td class="gen"><label for="Gender"><input type="radio" name="Gender"> Female</label></td>
+                <td class="gen"><label for="Gender" class="gen"><input type="radio" name="Gender"> Female</label></td>
             </tr>
             <tr>
-                <td class="gen"><label for="Gender"><input type="radio" name="Gender"> Other</label></td>
+                <td class="gen"><label for="Gender" class="gen"><input type="radio" name="Gender"> Other</label></td>
             </tr>
             <tr>
-                <td><label for="Address">Address </label></td>
+                <td class="lbls"><label for="Address">Address </label></td>
                 <td><input type="text" name="Name" placeholder="Enter address here..."></td>
             </tr>
             <tr>
-                <td><label for="Email">Email Id </label></td>
+                <td class="lbls"><label for="Email">Email Id </label></td>
                 <td><input type="email" name="Name" placeholder="Enter email here..."></td>
             </tr>
             <tr>
-                <td><label for="name">Contact Number </label></td>
+                <td class="lbls"><label for="name">Contact Number </label></td>
                 <td><input type="tel" name="Name" placeholder="Enter contact number..."></td>
             </tr>
             <tr>
-                <td><label for="name">Password</label></td>
+                <td class="lbls"><label for="name">Password</label></td>
                 <td><input type="password" name="Name" minlength="8" placeholder="Enter password here..."></td>
             </tr>
             <tr>
-                <td><label for="name">Confirm Password </label></td>
+                <td class="lbls"><label for="name">Confirm Password </label></td>
                 <td><input type="password" name="Name" minlength="8" placeholder="Confirm password here..."></td>
             </tr>
             <tr>
-                <td><label for="name">Description </label></td>
+                <td class="lbls"><label for="name">Description </label></td>
                 <td><textarea name="Description" placeholder="Enter description here..."></textarea></td>
             </tr>
             <tr>
@@ -140,6 +182,7 @@
             </tr>
         </table>
     </form>
+    </section>
 </body>
 
 </html>
