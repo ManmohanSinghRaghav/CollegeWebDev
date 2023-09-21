@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        table{
+            position: absolute;
+            margin: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        .btn {
+            height:100px;
+            width: 100px;
+            margin: 0px;
+            border: 1px solid ;
+            border-radius: 10px;
+        }
+        .txt{
+            text-align: right;
+            font: 50px arial;
+            width: 98.75%;
+            border:3px solid rgb(0, 0, 0);
+        }
+        .txt:hover{
+            border-color: gray;
+        }
+        .num{
+            font: 20px arial;
+            color: rgb(255, 255, 255);
+            background-color: black;
+            border-bottom: 2px solid red;
+        }
+        .num:hover{
+            background-color: rgb(31, 31, 31);
+        }
+        .plus{
+            height: 202px;
+        }
+    </style>
+    <script>
+        var val = ''
+        function btn_clk(btn) {
+            if (btn=='=') {
+                val=eval(val)
+            }else if(btn=='clr'){
+                val='';
+            }else if(btn=='del'){
+                val=val.slice(0,-1);
+            } else {
+                val+=btn
+            }
+            console.log(document.getElementById("txt").value);
+            document.getElementById('txt').value = val ;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="5"><input id="txt" class="btn txt" type="text" name="value" value="" placeholder="0"></td>
+        </tr>
+        <tr>
+            <td><input onclick="btn_clk('7');" class="btn num n7" type="button" value="7"></td>
+            <td><input onclick="btn_clk('8');" class="btn num n8" type="button" value="8"></td>
+            <td><input onclick="btn_clk('9');" class="btn num n9" type="button" value="9"></td>
+            <td><input onclick="btn_clk('/');" class="btn num dvd" type="button" value="/"></td>
+            <td><input onclick="btn_clk('clr');" class="btn num clr" type="button" value="C"></td>
+        </tr>
+        <tr>
+            <td><input onclick="btn_clk('4');" class="btn num n4" type="button" value="4"></td>
+            <td><input onclick="btn_clk('5');" class="btn num n5" type="button" value="5"></td>
+            <td><input onclick="btn_clk('6');" class="btn num n6" type="button" value="6"></td>
+            <td><input onclick="btn_clk('*');" class="btn num mult" type="button" value="x"></td>
+            <td><input onclick="btn_clk('%');" class="btn num rem" type="button" value="%"></td>
+        </tr>
+        <tr>
+            <td><input onclick="btn_clk('1');" class="btn num n1" type="button" value="1"></td>
+            <td><input onclick="btn_clk('2');" class="btn num n2" type="button" value="2"></td>
+            <td><input onclick="btn_clk('3');" class="btn num n3" type="button" value="3"></td>
+            <td rowspan="2"><input onclick="btn_clk('+');" class="btn num plus" type="button" value="+"></td>
+            <td><input onclick="btn_clk('-');" class="btn num min" type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input onclick="btn_clk('del');" class="btn num del" type="button" value="del"></td>
+            <td><input onclick="btn_clk('0');" class="btn num n0" type="button" value="0"></td>
+            <td><input onclick="btn_clk('.');" class="btn num dot" type="button" value="."></td>
+            <td><input onclick="btn_clk('=');" class="btn num eq" type="button" value="="></td>
+        </tr>
+    </table>
+</body>
+
+</html>
