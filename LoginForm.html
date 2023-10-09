@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        input{
+            width: 400px;
+            padding: 20px;
+            font: 30px arial;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border-bottom: 5px ridge black;
+        }
+        .btn:focus{
+            border: none;
+            border-top: 5px ridge black;
+        }
+        .hint{
+            margin: 15px;
+            font: 20px arial;
+        }
+    </style>
+</head>
+<body>
+    <div class="hint">Username : Web<br>Password&nbsp; : Technology</div>
+    <div class="main">
+        <input type="text" class="logid" placeholder="Enter Username here...">
+        <input type="password" class="psw" placeholder="Enter Password here...">
+        <input type="button" onclick="check()" class="btn" value="Log in">
+    </div>
+    <script>
+        function check() {
+            let logid = document.querySelector('.logid').value;
+            let psd = document.querySelector('.psw').value;
+            if (psd!='Technology') {
+                alert('Wrong Password...')
+            } else if(logid != 'Web'){
+                alert('Wrong Username...')
+            } else{
+                alert('Welcome...')
+            }
+        }
+    </script>
+</body>
+</html>
