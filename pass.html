@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Registeration</title>
     <style>
-        body{
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        form{
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -30,13 +35,14 @@
     </style>
 </head>
 <body>
-    <form onSubmit="return run(this)">
-    <input type="text" name="name" id="name" placeholder="Enter Your Name Here . . ." required>
-    <input type="password" name="password" id="Pass1"  placeholder="Enter Password Here . . ." required>
-    <input type="password" name="password" id="Pass2"  placeholder="Confirm Password . . ." required>
-    <input type="submit" id="Submit" Value="Submit">
+    <form onsubmit="return run(this)">
+        <input type="text" name="name" id="name" placeholder="Enter Your Name Here . . ." required>
+        <input type="password" name="password" id="Pass1"  placeholder="Enter Password Here . . ." required>
+        <input type="password" name="password" id="Pass2"  placeholder="Confirm Password . . ." required>
+        <input type="submit" id="Submit" Value="Submit">
+    </form>
     <script>
-        Submit.addEventListener('click', function run()=>{
+        Submit.addEventListener('click', function run(e){
             if (Pass1.value == Pass2.value){
                 alert("Welcome To GLA.")
                 return true
