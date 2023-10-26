@@ -30,12 +30,13 @@
     </style>
 </head>
 <body>
+    <form onSubmit="return run(this)">
     <input type="text" name="name" id="name" placeholder="Enter Your Name Here . . ." required>
     <input type="password" name="password" id="Pass1"  placeholder="Enter Password Here . . ." required>
     <input type="password" name="password" id="Pass2"  placeholder="Confirm Password . . ." required>
     <input type="submit" id="Submit" Value="Submit">
     <script>
-        Submit.addEventListener('click', (e)=>{
+        Submit.addEventListener('click', function run()=>{
             if (Pass1.value == Pass2.value){
                 alert("Welcome To GLA.")
                 return true
