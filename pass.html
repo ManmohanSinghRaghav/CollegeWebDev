@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 125, 93);
+        }
+        input{
+            width: 50vw;
+            height: 50px;
+            margin: 1em;
+            padding-left: 2em;
+            font-size: 20px;
+            border-radius: 8px;
+            border: none;
+            border-bottom: 3px solid rgb(163, 65, 0);
+            box-shadow: 0px -5px 15px black;
+        }
+        #Submit{
+            width: 20vw;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="name" id="name" placeholder="Enter Your Name Here . . ." required>
+    <input type="password" name="password" id="Pass1"  placeholder="Enter Password Here . . ." required>
+    <input type="password" name="password" id="Pass2"  placeholder="Confirm Password . . ." required>
+    <input type="submit" id="Submit" Value="Submit">
+    <script>
+        Submit.addEventListener('click', (e)=>{
+            if (Pass1.value == Pass2.value){
+                alert("Welcome To GLA.")
+                return true
+            } else {
+                alert("Password is not correct.")
+                return false
+            } 
+        })
+    </script>
+</body>
+</html>
