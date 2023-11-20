@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         body, .prof, form{
             display: flex;
@@ -13,7 +16,7 @@
             font-size: 20px;
         }
         body{
-            height: 100vh;
+            height: max-content;
             width: 100vw;
             overflow: hidden;
         }
@@ -81,7 +84,8 @@ print('<div> Student Percentage : '. $S->per.'%</div>');
     <input type="submit" value="Change">
 </form>
 
-<div>
+    <button id="btn" onclick="menu()"></button>
+    <div id="nav">
     <ul>
         <li><a href="EditPro.html">Change Profile</a></li>
         <li><a href="School.html">School</a></li>
@@ -89,5 +93,5 @@ print('<div> Student Percentage : '. $S->per.'%</div>');
         <li><a href="Job.html">Job</a></li>
         <li><a href="Hobby.html">Hobby</a></li>
     </ul>
-</div>
+</div> 
 </body></html>

@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(213, 255, 213);
+}
+
+div {
+    position: absolute;
+    background-color: rgb(255, 85, 85);
+    margin: -10px;
+    text-align: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0%);
+    transition: 0.5s;
+}
+
+button {
+    position: absolute;
+    user-select: none;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 85, 85);
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 5px;
+    border-radius: 5px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZ0lEQVR4nO3WwQmAQAwF0SlPt/+zC4t9RGxAZRH84DzIPTkEBiRJek8DOlDh04H16pARsGQ9nP0Xh6zAFrBk3cy54zL7P5IkSR9pZjxZ9TsCyrbMeEmSpGzNjCerfkdAnpcZL0kScw7zFAKxsVXx1wAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 50%;
+    transition: 0.5s;
+}
+
+ul {
+    padding: 20px;
+    list-style-type: none;
+}
+
+li {
+    background-color: brown;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+}
